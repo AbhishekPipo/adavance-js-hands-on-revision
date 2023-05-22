@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" onkeypress="better()">
+
+    <script>
+        let count = 0;
+        var getdata = () => {
+            console.log("fetching...", ++count);
+        };
+
+        let timer;
+        var debounce = function (fn, d) {
+            return function () {
+                // let context = this,
+                //     args = arguments;
+
+                clearTimeout(timer);
+
+                timer = setTimeout(() => {
+                    // getdata.apply(context, arguments);
+                    getdata.apply();
+
+                }, d);
+            };
+        };
+
+        var better = debounce(getdata, 3000);
+    </script>
+</body>
+</html>

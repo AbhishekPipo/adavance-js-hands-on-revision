@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // async always returns promise
+      //promise->resolve.then()->reject.cath()
+
+      //why ?? in promise we have to declare resolve and reject every time
+
+      //thus to avoid those coomplication async function is created
+    //   async function test() {
+    //     return "heello";
+    //   }
+
+    //   test()
+    //   .then((result) => {
+    //     console.log(result);
+    //     return result
+    //     // console.log("test func successfully resolved, without writing resolve");
+    //   })
+    //   .then((result)=>console.log(result+"world"))
+      
+    // //   console.log(test());
+
+
+
+    async function test(){
+        console.log("a");
+        await  fetch("https://api.github.com/users/AbhishekPipo/repos")
+        // .then(data=>console.log(data))
+
+        console.log("c");
+
+    }
+
+    test();
+    console.log("A");
+    </script>
+  </body>
+</html>

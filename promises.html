@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let cart=["shoes","pant","kurta"];
+        // createOrder(cart, function (){
+        // proceedToPayment(orderId);
+        // });
+// there is an issue in this code 
+
+// that is inversion of controll 
+
+//am giving this control to other function
+
+//to avoid this we use promises
+
+//prromises gives an trust that it will resolve or give result
+
+// let promise=createOrder(cart);
+// // {data: filled}
+// promise.then(function(orderId){
+// proceedToPayment()
+// })
+// .then(function(){
+//     showOrderD()
+// })
+
+let user=fetch("https://api.github.com/users/AbhishekPipo/repos")
+//   user.then(response => response.json())
+//   .then(repos =>{
+//     repos.forEach(repo=> console.log(repo.name))
+//   })
+//   .catch(error => console.error(error));
+console.log(user);
+
+ 
+    </script>
+</body>
+</html>

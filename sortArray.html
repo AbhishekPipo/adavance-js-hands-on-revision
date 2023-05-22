@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let arr=[12,34,5,11,24];
+        // let sortedArr=arr.sort((a,b)=>a-b);
+        // let secMax=sortedArr[sortedArr.length-2]
+        // console.log(sortedArr);
+        // console.log(secMax);
+
+        // let courses=["python","java","javascript"]
+        // let res=courses.filter(function(course){
+        //     return course.includes("t")
+        // })
+        // console.log(res);
+
+        function findRepeatedChars(str) {
+  let repeatedChars = "";
+  let charCount = {};
+
+  for (let char of str) {
+    if (charCount[char]) {
+      if (repeatedChars.indexOf(char) === -1) {
+        repeatedChars += char;
+      }
+    } else {
+      charCount[char] = 1;
+    }
+  }
+
+  return repeatedChars;
+}
+
+let str = "farhan pasha";
+let repeatedChars = findRepeatedChars(str);
+console.log(repeatedChars); // a h
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function y(){
+        //     console.log("this is a call back function");
+        // }
+        // function x(){
+        //     console.log("this is a high order function");
+        //     y();
+        // }
+        // x();
+        // function x(y()=>{
+        //     console.log("this is a call back func");
+        // })
+
+        function x(y){
+            console.log("this is high order fun");
+            y();
+        }
+
+        function y(){
+            console.log("this is a call back function");
+        }
+
+        x(y);
+    </script>
+</body>
+</html>
